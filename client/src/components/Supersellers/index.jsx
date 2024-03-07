@@ -9,7 +9,7 @@ function Supersellers() {
       </div>
       <div className="row row-cols-1 row-cols-lg-3 align-items-stretch g-5">
         <div className="col">
-          <div className="supersellers bg-dark rounded-5 shadow-lg" style={{ backgroundImage: `url('https://github.com/abbyedxcmk/pizzabackend/blob/main/client/src/assets/pizza-images/05.png?raw=true')` }}>
+          <div className="supersellers bg-dark rounded-5 shadow-lg" style={{ backgroundImage: `url('https://github.com/whybruno/sliceandsizzle/blob/main/client/src/assets/pizza-images/05.gif?raw=true')` }}>
             <div className="d-flex h-100 justify-content-center align-items-center">
               <h2 className="display-3 fw-bold text-white bg-color-2 w-100 py-3">CAPRICCIOSA</h2>
             </div>
