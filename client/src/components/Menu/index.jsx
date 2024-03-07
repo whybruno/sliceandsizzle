@@ -35,7 +35,7 @@ function Menu({ onAddToOrder }) {
 
 
   return (
-    <div className='container-fluid p-5 bg-color-2' id="Menu">
+    <div className='container-fluid p-5 bg-color-2'>
       <div className='row mb-4 ps-md-5 ps-lg-0'>
         <h2 className='display-5 color-4 fw-bold'>Explore Our Menu</h2>
       </div>
@@ -88,6 +88,7 @@ function Menu({ onAddToOrder }) {
             </div>
           </div>
         ))}
+        <div id="Order"></div>
       </div>
     </div>
   );

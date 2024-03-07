@@ -2,7 +2,7 @@ import React from 'react';
 import moreIcon from '../../assets/icons/more.png';
 import lessIcon from '../../assets/icons/less.png';
 
-function Order({ orderItems, onUpdateQuantity }) {
+function Order({ orderItems, onUpdateQuantity, onRemoveItem }) {
   const handleIncrement = (event, index) => {
     event.preventDefault(); // Avoid default link behavior
     onUpdateQuantity(index, orderItems[index].qty + 1);
@@ -12,10 +12,15 @@ function Order({ orderItems, onUpdateQuantity }) {
     event.preventDefault(); // Avoid default link behavior
     const newQty = Math.max(0, orderItems[index].qty - 1); // Ensures quantity is not less than zero
     onUpdateQuantity(index, newQty);
+
+    if (newQty === 0 && onRemoveItem) {
+      // Call the provided onRemoveItem callback to remove from orderItems
+      onRemoveItem(index);
+    }
   };
 
   return (
-    <div className='container-fluid px-5 py-5' id="Order">
+    <div className='container-fluid px-5 py-5'>
       <div className='row mb-4 ps-md-5 ps-lg-0'>
         <h2 className='display-5 fw-bold'>Your Order</h2>
       </div>

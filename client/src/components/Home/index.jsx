@@ -25,13 +25,11 @@ const Home = () => {
     setOrderItems(updatedOrderItems);
   };
 
-  // Function to calculate order subtotal
-  const calculateSubtotal = () => {
-    let subtotal = 0;
-    orderItems.forEach((pizza) => {
-      subtotal += parseFloat(pizza[pizza.selectedPrice]) * pizza.qty;
-    });
-    return subtotal.toFixed(2);
+  // Function to handle removing an item from the order
+  const handleRemoveItem = (index) => {
+    const updatedOrderItems = [...orderItems];
+    updatedOrderItems.splice(index, 1);
+    setOrderItems(updatedOrderItems);
   };
 
   // Function to calculate the order subtotal and delivery fee
@@ -55,6 +53,7 @@ const Home = () => {
         <Order
           orderItems={orderItems}
           onUpdateQuantity={updateQuantity}
+          onRemoveItem={handleRemoveItem}
         ></Order>
         <Checkout
           subtotal={calculateTotal().subtotal}

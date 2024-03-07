@@ -1,3 +1,7 @@
 .supersellers-h2 {
   letter-spacing: 0.25rem;
 }
+
+.supersellers-height img {
+  max-height: 22.5rem;
+}

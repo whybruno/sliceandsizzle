@@ -36,7 +36,7 @@ function Feedbacks() {
   };
 
   return (
-    <div id="Feedbacks" className='container-fluid p-5 bg-color-2'>
+    <div className='container-fluid p-5 bg-color-2'>
       <div className='row mb-4 ps-md-5 ps-lg-0'>
         <h2 className='display-5 color-4 fw-bold'>Customers Feedbacks</h2>
       </div>

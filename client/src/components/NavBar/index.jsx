@@ -15,6 +15,12 @@ function NavBar() {
       .then((response) => console.log(response))
       .catch((err) => toast.error(err.response.data.message));
   };
+
+  const navigateSmooth = (href) => {
+    const navigate = useNavigate();
+    navigate(`#${href}`, { behavior: "smooth" });
+  };
+
   return (
     <Navbar expand="lg" className="bg-body-tertiary py-3">
       <Container fluid>
@@ -24,16 +30,16 @@ function NavBar() {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="#Supersellers" className="text-light">
+            <Nav.Link href="#Supersellers" className="text-light" onClick={() => navigateSmooth("Supersellers")}>
               Supersellers
             </Nav.Link>
-            <Nav.Link href="#Menu" className="text-light">
+            <Nav.Link href="#Menu" className="text-light" onClick={() => navigateSmooth("Menu")}>
               Menu
             </Nav.Link>
-            <Nav.Link href="#Order" className="text-light">
+            <Nav.Link href="#Order" className="text-light" onClick={() => navigateSmooth("Order")}>
               Your Order
             </Nav.Link>
-            <Nav.Link href="#Feedbacks" className="text-light">
+            <Nav.Link href="#Feedbacks" className="text-light" onClick={() => navigateSmooth("Feedbacks")}>
               Customer Reviews
             </Nav.Link>
           </Nav>

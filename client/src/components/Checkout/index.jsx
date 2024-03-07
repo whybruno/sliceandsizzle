@@ -136,6 +136,7 @@ function Checkout({ subtotal, total }) {
               </form>
             </div>
           </div>
+          <div id="Feedbacks"></div>
         </div>
       </div>
 
