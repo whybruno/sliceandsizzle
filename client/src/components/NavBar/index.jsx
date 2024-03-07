@@ -16,7 +16,7 @@ function NavBar() {
       .catch((err) => toast.error(err.response.data.message));
   };
   return (
-    <Navbar expand="lg" className="bg-body-tertiary">
+    <Navbar expand="lg" className="bg-body-tertiary py-3">
       <Container fluid>
         <Navbar.Brand as={Link} to="/" className="text-light">
           Slice and Sizzle
